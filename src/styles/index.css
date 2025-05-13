@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Pastel';
+  src: url('../assets/pastel.ttf') format('truetype');
+}
+
+:root {
+  --text-primary: #ffffff;
+  --text-about: #ff8888;
+  --text-projects: #ff69b4;
+  --text-blogs: #6495ed;
+  --text-case-studies: #d8c622;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pastel', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  color: var(--text-primary);
+  overflow-x: hidden;
+  background-image: url('../assets/homepage.png');
+  background-size:cover; 
+  background-position: center; 
+  cursor: url('../assets/cursor.png'), auto;
+
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

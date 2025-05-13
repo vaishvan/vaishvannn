@@ -1,0 +1,156 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .home-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: var(--text-primary);
+    font-family: 'Pastel', monospace;
+  }
+  
+  .header-gif {
+    width: 20%;
+    height: 20%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .home-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    height: 400px;
+  }
+  
+  .nav-link {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: absolute; 
+  }
+  
+  .nav-link:hover {
+    transform: scale(1.1);
+  }
+  
+  .about-link { 
+    top: 20%;
+    left: 50px;
+    color: var(--text-about); 
+  }
+  
+  .projects-link { 
+    bottom: 20%;
+    left: 50px;
+    color: var(--text-projects); 
+  }
+  
+  .blogs-link { 
+    top: 20%;
+    right: 20%;
+    color: var(--text-blogs); 
+  }
+  
+  .case-studies-link { 
+    bottom: 20%;
+    right: 50px;
+    color: var(--text-case-studies); 
+  }
+  
+  .character-image {
+    width: 50%;
+    height: 130%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  }
+  
+  .delayed-prompt {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    color: #ffffff;
+    font-size: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: 'Pastel', monospace;
+  }
+  
+  .delayed-prompt.visible {
+    opacity: 1;
+  }
+
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 700px) {
+    .home-content {
+      height: 600px;
+    }
+    
+    .about-link { 
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .projects-link { 
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .blogs-link { 
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .case-studies-link { 
+      bottom: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .character-image {
+      width: 50%;
+      height: auto;
+    }
+
+    .header-gif {
+      width: 30%;
+      height: 30%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
