@@ -2,6 +2,9 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import DelayedPrompt from '../components/DelayedPrompt'
 import '../styles/Page.css'
+import spirogif from "../assets/spiro.gif"
+import pkmngif from "../assets/pkmn.gif"
+
 
 const Projects = () => {
   return (
@@ -24,7 +27,7 @@ const Projects = () => {
           This was my first dive into GUI programming, and SFML made it surprisingly smooth (albeit the learning curve was a bit steep).
           I learned a lot about rendering stuff in real-time, dealing with events, and a whole lot of appreciation for graphics programmers!
           Here's a GIF of it in action:<br></br>
-          <img src='src\assets\Recording 2025-05-12 021428 (online-video-cutter.com).gif' className='spiro-gif'></img>
+          <img src={spirogif} className='spiro-gif'></img>
           <br></br>
           The whole thing is just some math, a loop, and a bunch of pixels doing their thing lol, 10/10 would recommend<br></br>
           <a href='https://github.com/vaishvan/spirographish' target='blank' rel="noopener noreferrer">Click here for the Github link!</a>
@@ -38,7 +41,7 @@ const Projects = () => {
             and I figured this would be a cool thing to build. I used React to build this website, and the background was made with
             Figma.<br></br>
             I won't bore you by explaining how cool this project is but rather I'll let you see it for yourself: <br></br>
-            <img src='src\assets\pkmn.gif' className='spiro-gif'></img>
+            <img src={pkmngif} className='spiro-gif'></img>
             <br></br><br></br>
             <a href='https://vaishvan.github.io/PKMN_ANALYZER/' target='blank' rel="noopener noreferrer">Click here for the Website link!</a> <br></br><br></br>
             <a href='https://github.com/vaishvan/PKMN_ANALYZER' target='blank' rel="noopener noreferrer">Click here for the Github link!</a>
