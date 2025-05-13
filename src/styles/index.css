@@ -23,7 +23,7 @@ body {
   height: 100vh;
   color: var(--text-primary);
   overflow-x: hidden;
-  background-image: url('../assets/homepage.png');
+  background-image: url('../assets/homepage.webp');
   background-size:cover; 
   background-position: center; 
   cursor: url('../assets/cursor.png'), auto;
