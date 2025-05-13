@@ -20,7 +20,7 @@ const Blogs = () => {
         <div className="content-placeholder">
           looks like you're here a bit early 
           <br></br>
-          come back later ˙ᴗ˙
+          come back later :0
         </div>
       </div>
       
