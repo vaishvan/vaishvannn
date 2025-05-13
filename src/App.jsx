@@ -5,8 +5,19 @@ import Projects from './pages/Projects'
 import Blogs from './pages/Blogs'
 import CaseStudies from './pages/CaseStudies'
 import './styles/App.css'
+import { useEffect } from 'react'
 
 function App() {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '../oneko.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
   return (
     <div className="app">
       <Routes>
