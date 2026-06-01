@@ -1,6 +1,5 @@
 import React from 'react'
 import GithubIcon from '../assets/Github.svg';
-import InstaIcon from '../assets/Instagram.svg';
 import LinkedinIcon from '../assets/Linkedin.svg';
 import EmailIcon from '../assets/Mail.svg';
 
@@ -17,9 +16,6 @@ const Footer = () => {
       </a>
       <a href="mailto:vaishnav314195@gmail.com">
       <img src={EmailIcon} alt="Mail" className="social-icon" />
-      </a>
-      <a href="https://www.instagram.com/mottapuffszn/" target="_blank" rel="noopener noreferrer">
-      <img src={InstaIcon} alt="Instagram" className="social-icon" />
       </a>
     </footer>
   )

@@ -18,8 +18,8 @@
   }
   
   .header-gif {
-    width: 20%;
-    height: 20%;
+    width: min(280px, 70vw);
+    height: auto;
     margin: 0 auto;
     display: block;
   }
@@ -94,25 +94,7 @@
     opacity: 1;
   }
 
-  
-  .footer {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  
-  .social-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.2);
-  }
-  
+
   @media (max-width: 700px) {
     .home-content {
       height: 600px;
@@ -148,8 +130,8 @@
     }
 
     .header-gif {
-      width: 30%;
-      height: 30%;
+      width: min(240px, 85vw);
+      height: auto;
       margin: 0 auto;
       display: block;
     }

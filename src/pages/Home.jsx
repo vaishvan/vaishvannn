@@ -12,11 +12,11 @@ const Home = () => {
       <DelayedPrompt />
 
       <header className="home-header">
-      <img src={namegif} alt="welcome to my site!" className="header-gif" />
+      <img src={namegif} alt="welcome to my site!" className="header-gif" loading="lazy" />
       </header>
 
       <div className="home-content">
-        <img src={Image} alt="Image" className="character-image" />
+        <img src={Image} alt="Image" className="character-image" loading="lazy" />
 
         <Link to="/about" className="nav-link about-link">about me!</Link>        
         <Link to="/blogs" className="nav-link blogs-link">blogs</Link>

@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Pastel';
-  src: url('../assets/pastel.ttf') format('truetype');
+  src: url('../assets/pastel.woff2') format('woff2'),
+       url('../assets/pastel.ttf') format('truetype');
+  font-display: swap;
 }
 
 :root {
@@ -34,6 +36,39 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Footer social icons — global so every route (not only Home) gets correct size */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.footer .social-icon,
+.footer img.social-icon {
+  width: 28px;
+  height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icon:hover {
+  transform: scale(1.15);
 }
 
 .container {
