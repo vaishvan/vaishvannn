@@ -1,6 +1,8 @@
 @font-face {
   font-family: 'Pastel';
-  src: url('../assets/pastel.ttf') format('truetype');
+  src: url('../assets/pastel.woff2') format('woff2'),
+       url('../assets/pastel.ttf') format('truetype');
+  font-display: swap;
 }
 
 :root {

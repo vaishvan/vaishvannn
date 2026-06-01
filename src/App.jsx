@@ -1,33 +1,35 @@
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Blogs from './pages/Blogs'
-import CaseStudies from './pages/CaseStudies'
 import './styles/App.css'
-import { useEffect } from 'react'
+
+// Dynamic lazy imports for page-level code splitting
+const Home = React.lazy(() => import('./pages/Home'))
+const About = React.lazy(() => import('./pages/About'))
+const Projects = React.lazy(() => import('./pages/Projects'))
+const Blogs = React.lazy(() => import('./pages/Blogs'))
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'))
 
 function App() {
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = '../oneko.js';
-    script.async = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    }
-  }, []);
   return (
     <div className="app">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/case-studies" element={<CaseStudies />} />
-      </Routes>
+      <React.Suspense fallback={<div className="loading" style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        fontFamily: "'Pastel', monospace",
+        color: '#ffffff',
+        fontSize: '2rem'
+      }}>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+        </Routes>
+      </React.Suspense>
     </div>
   )
 }
