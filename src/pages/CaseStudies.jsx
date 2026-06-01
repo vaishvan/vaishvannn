@@ -41,8 +41,8 @@ const CaseStudies = () => {
                 onClick={() => setActiveCaseStudy('genshin-teardown')}
               >
                 <div className="casestudy-card-header">
-                  <span className="casestudy-card-badge">Product PM</span>
-                  <span style={{ fontSize: '0.75rem', color: '#aaaaaa' }}>June 2026</span>
+                  
+                  <span style={{ fontSize: '0.75rem', color: '#aaaaaa' }}>Feb 2026</span>
                 </div>
                 <h3 className="casestudy-card-title">Genshin Impact Teardown</h3>
                 <p className="casestudy-card-desc">
