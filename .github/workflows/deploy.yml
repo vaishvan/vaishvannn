@@ -1,0 +1,44 @@
+name: Deploy portfolio to gh pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            #Checkout repository
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            #Setup Nodejs (Vite 8 needs Node 20.19+)
+            - name: Setup Nodejs
+              uses: actions/setup-node@v4
+              with:
+                node-version: 22
+
+            #Install dependencies
+            - name: Install dependencies
+              run: npm ci
+
+            #Build project
+            - name: Build project
+              run: npm run build
+
+            #SPA fallback so deep links like /vaishvannn/about load the app
+            - name: Add 404 fallback
+              run: cp dist/index.html dist/404.html
+
+            #Deploy to gh pages
+            - name: Deploy to gh pages
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: dist

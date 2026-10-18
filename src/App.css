@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	overflow: hidden;
+}
+
+#menu-screen {
+	position: relative;
+	width: 100vw;
+	/* visible screen height; 100vh fallback for old browsers */
+	height: 100vh;
+	height: 100dvh;
+	overflow: hidden;
+}
+
+#menu-screen video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#main {
+	width: 100vw;
+	/* visible screen height; 100vh fallback for old browsers */
+	height: 100vh;
+	height: 100dvh;
+}
