@@ -397,33 +397,6 @@ export default function Socials({ mediaMuted = true, sfxMuted = true }) {
         }
         .sc-bar-outer.active .sc-label { color: #111111; }
 
-        /* lb/rb nav row */
-        @keyframes sc-arrow-left {
-          0%, 100% { transform: translateX(0); opacity: 1; }
-          50%       { transform: translateX(-5px); opacity: 0.4; }
-        }
-        @keyframes sc-arrow-right {
-          0%, 100% { transform: translateX(0); opacity: 1; }
-          50%       { transform: translateX(5px); opacity: 0.4; }
-        }
-        .sc-nav-btn {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 12px;
-          letter-spacing: 2px;
-          color: #111;
-          border: 1px solid rgba(0,0,0,0.35);
-          padding: 1px 7px;
-          line-height: 1.5;
-          user-select: none;
-        }
-        .sc-nav-arrow {
-          font-size: 12px;
-          color: #c4001a;
-          display: inline-block;
-        }
-        .sc-nav-arrow.left  { animation: sc-arrow-left  0.8s ease-in-out infinite; }
-        .sc-nav-arrow.right { animation: sc-arrow-right 0.8s ease-in-out infinite; }
-
         /* right: stats group */
         .sc-stats {
           display: flex;
@@ -500,60 +473,6 @@ export default function Socials({ mediaMuted = true, sfxMuted = true }) {
           opacity: 0.78;
           clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
         }
-
-        /* right-side nav bar */
-        @keyframes sc-right-nav-pop {
-          0%   { opacity: 0; transform: scale(0.55) translateY(-10px); }
-          65%  { opacity: 1; transform: scale(1.1) translateY(2px); }
-          100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .sc-right-nav {
-          position: fixed;
-          top: 40px;
-          right: 40px;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          pointer-events: none;
-          z-index: 55;
-          background: rgba(8, 14, 42, 0.82);
-          padding: 4px 12px;
-          border-radius: 8px;
-          box-shadow: inset 0 0 0 1px rgba(145,245,255,0.3);
-          animation: sc-right-nav-pop 0.38s cubic-bezier(0.22,1,0.36,1) both;
-        }
-        .sc-right-nav .sc-nav-btn {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 52px;
-          letter-spacing: 3px;
-          line-height: 1;
-          user-select: none;
-          color: #fff;
-          -webkit-text-stroke: 2px #000;
-          paint-order: stroke fill;
-          background: none;
-          border: none;
-          padding: 0 6px;
-        }
-        .sc-right-nav .sc-nav-label {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 28px;
-          letter-spacing: 3px;
-          line-height: 1;
-          user-select: none;
-          color: #e9fbff;
-          text-shadow: 0 1px 0 rgba(0,0,0,0.55);
-          padding: 0 8px;
-        }
-        .sc-right-nav .sc-nav-arrow {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 22px;
-          color: #c4001a;
-          display: inline-block;
-          user-select: none;
-        }
-        .sc-right-nav .sc-nav-arrow.left  { animation: sc-arrow-left  0.8s ease-in-out infinite; }
-        .sc-right-nav .sc-nav-arrow.right { animation: sc-arrow-right 0.8s ease-in-out infinite; }
 
         .sc-mobile-cats {
           display: none;
@@ -808,9 +727,6 @@ export default function Socials({ mediaMuted = true, sfxMuted = true }) {
           .sc-stat-num {
             font-size: 18px;
           }
-          .sc-right-nav {
-            display: none;
-          }
           .sc-info-panel {
             left: 8px;
             right: 8px;
@@ -972,16 +888,6 @@ export default function Socials({ mediaMuted = true, sfxMuted = true }) {
 							{item.icon}
 						</button>
 					))}
-				</div>
-			)}
-
-			{mounted && (
-				<div className="sc-right-nav" key={active}>
-					<span className="sc-nav-arrow left">◄</span>
-					<span className="sc-nav-btn">LB</span>
-					<span className="sc-nav-label">{ITEMS[active].label}</span>
-					<span className="sc-nav-btn">RB</span>
-					<span className="sc-nav-arrow right">►</span>
 				</div>
 			)}
 
