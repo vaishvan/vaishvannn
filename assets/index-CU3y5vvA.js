@@ -732,33 +732,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
         }
         .sc-bar-outer.active .sc-label { color: #111111; }
 
-        /* lb/rb nav row */
-        @keyframes sc-arrow-left {
-          0%, 100% { transform: translateX(0); opacity: 1; }
-          50%       { transform: translateX(-5px); opacity: 0.4; }
-        }
-        @keyframes sc-arrow-right {
-          0%, 100% { transform: translateX(0); opacity: 1; }
-          50%       { transform: translateX(5px); opacity: 0.4; }
-        }
-        .sc-nav-btn {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 12px;
-          letter-spacing: 2px;
-          color: #111;
-          border: 1px solid rgba(0,0,0,0.35);
-          padding: 1px 7px;
-          line-height: 1.5;
-          user-select: none;
-        }
-        .sc-nav-arrow {
-          font-size: 12px;
-          color: #c4001a;
-          display: inline-block;
-        }
-        .sc-nav-arrow.left  { animation: sc-arrow-left  0.8s ease-in-out infinite; }
-        .sc-nav-arrow.right { animation: sc-arrow-right 0.8s ease-in-out infinite; }
-
         /* right: stats group */
         .sc-stats {
           display: flex;
@@ -835,60 +808,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           opacity: 0.78;
           clip-path: polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%);
         }
-
-        /* right-side nav bar */
-        @keyframes sc-right-nav-pop {
-          0%   { opacity: 0; transform: scale(0.55) translateY(-10px); }
-          65%  { opacity: 1; transform: scale(1.1) translateY(2px); }
-          100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .sc-right-nav {
-          position: fixed;
-          top: 40px;
-          right: 40px;
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          pointer-events: none;
-          z-index: 55;
-          background: rgba(8, 14, 42, 0.82);
-          padding: 4px 12px;
-          border-radius: 8px;
-          box-shadow: inset 0 0 0 1px rgba(145,245,255,0.3);
-          animation: sc-right-nav-pop 0.38s cubic-bezier(0.22,1,0.36,1) both;
-        }
-        .sc-right-nav .sc-nav-btn {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 52px;
-          letter-spacing: 3px;
-          line-height: 1;
-          user-select: none;
-          color: #fff;
-          -webkit-text-stroke: 2px #000;
-          paint-order: stroke fill;
-          background: none;
-          border: none;
-          padding: 0 6px;
-        }
-        .sc-right-nav .sc-nav-label {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 28px;
-          letter-spacing: 3px;
-          line-height: 1;
-          user-select: none;
-          color: #e9fbff;
-          text-shadow: 0 1px 0 rgba(0,0,0,0.55);
-          padding: 0 8px;
-        }
-        .sc-right-nav .sc-nav-arrow {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 22px;
-          color: #c4001a;
-          display: inline-block;
-          user-select: none;
-        }
-        .sc-right-nav .sc-nav-arrow.left  { animation: sc-arrow-left  0.8s ease-in-out infinite; }
-        .sc-right-nav .sc-nav-arrow.right { animation: sc-arrow-right 0.8s ease-in-out infinite; }
 
         .sc-mobile-cats {
           display: none;
@@ -1143,9 +1062,6 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           .sc-stat-num {
             font-size: 18px;
           }
-          .sc-right-nav {
-            display: none;
-          }
           .sc-info-panel {
             left: 8px;
             right: 8px;
@@ -1232,7 +1148,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
           }
 
         }
-      `}),(0,X.jsx)(`div`,{className:`sc-root`,role:`navigation`,children:um.map((e,t)=>(0,X.jsxs)(`div`,{className:`sc-bar-outer${n===t?` active`:``}${i?` mounted`:``}`,onClick:()=>{n===t?d():f(),r(t),l(`left`),s(0)},onMouseEnter:()=>{d(),r(t)},children:[(0,X.jsx)(`div`,{className:`sc-bar-red`}),(0,X.jsxs)(`div`,{className:`sc-bar`,children:[(0,X.jsx)(`img`,{className:`sc-char`,src:cm[t],alt:``}),(0,X.jsx)(`div`,{className:`sc-bar-fill`}),(0,X.jsx)(`div`,{className:`sc-bar-shade`}),(0,X.jsxs)(`div`,{className:`sc-bar-content`,children:[(0,X.jsx)(`div`,{className:`sc-role`,children:lm[t].text}),(0,X.jsx)(`div`,{className:`sc-main`,children:(0,X.jsxs)(`div`,{className:`sc-main-top`,children:[(0,X.jsx)(`div`,{className:`sc-icon`,children:e.icon}),(0,X.jsx)(`div`,{className:`sc-label`,children:e.label})]})}),(0,X.jsx)(`div`,{className:`sc-stats`,children:e.stats.map(e=>(0,X.jsxs)(`div`,{className:`sc-stat`,children:[(0,X.jsxs)(`div`,{className:`sc-stat-top`,children:[(0,X.jsx)(`span`,{className:`sc-stat-tag`,style:{color:e.color,borderColor:e.color},children:e.tag}),(0,X.jsx)(`span`,{className:`sc-stat-num`,children:e.value})]}),(0,X.jsxs)(`div`,{className:`sc-stat-bars`,children:[(0,X.jsx)(`div`,{className:`sc-stat-bar-color`,style:{background:e.color}}),(0,X.jsx)(`div`,{className:`sc-stat-bar-black`})]})]},e.tag))})]})]})]},e.id))}),i&&(0,X.jsx)(`div`,{className:`sc-mobile-cats`,"aria-label":`Social categories`,children:um.map((e,t)=>(0,X.jsx)(`button`,{type:`button`,className:`sc-mobile-cat${n===t?` active`:``}`,onClick:()=>{n===t?d():f(),r(t),s(0),l(`right`)},children:e.icon},`mobile-cat-${e.id}`))}),i&&(0,X.jsxs)(`div`,{className:`sc-right-nav`,children:[(0,X.jsx)(`span`,{className:`sc-nav-arrow left`,children:`◄`}),(0,X.jsx)(`span`,{className:`sc-nav-btn`,children:`LB`}),(0,X.jsx)(`span`,{className:`sc-nav-label`,children:um[n].label}),(0,X.jsx)(`span`,{className:`sc-nav-btn`,children:`RB`}),(0,X.jsx)(`span`,{className:`sc-nav-arrow right`,children:`►`})]},n),i&&(0,X.jsx)(`div`,{className:`sc-info-panel`,children:Array.from({length:um[n].bars}).map((e,t)=>(0,X.jsx)(`div`,{className:`sc-info-bar-wrap${o===t?` selected`:``}`,ref:e=>{h.current[t]=e},style:{animationDelay:`${t*50}ms`},onClick:()=>{let e=um[n].links[t];if(!e){m();return}f(),s(t),l(`right`);let r=/^(https?:\/\/|mailto:)/.test(e)?e:`https://${e}`;window.open(r,`_blank`)},onMouseEnter:()=>{d(),s(t),l(`right`)},children:(0,X.jsxs)(`div`,{className:`sc-info-bar`,children:[(0,X.jsx)(`img`,{className:`sc-info-bar-icon`,src:um[n].barIcon,alt:``}),(0,X.jsx)(dm,{text:um[n].entries[t].label,selected:o===t}),(0,X.jsx)(`span`,{className:`sc-info-bar-box`,children:`VIEWS`}),(0,X.jsx)(`span`,{className:`sc-info-bar-count`,children:um[n].counts[t]})]})},`bar-${n}-${t}`))})]})}var pm=`/vaishvannn/assets/main1.optimized-C9UXJ_Xu.mp4`,mm=`/vaishvannn/assets/mainm-Dt0EWjBj.jpeg`,hm=Lp.bio,gm=[`Crazily obsessed about product and anything startup`,`LOVES Persona`,`Will happily turn any messy dataset into a story`,`Always building something on the side, usually with way too many tabs open`],_m=Hp.find(e=>e.label===`GitHub`)?.href;function vm({mediaMuted:e=!0,sfxMuted:t=!0}){let{goBack:n}=Pp(`/`),r=pt(),i=(0,w.useRef)(null),{playHover:a,playConfirm:o,playBack:s}=kp({muted:t}),c=()=>{_m&&(o(),window.open(_m,`_blank`,`noopener,noreferrer`))},l=()=>{o(),r(`/socials`)},u=()=>{s(),n()},d=e=>{let t=i.current;t&&(a(),(t.scrollHeight>t.clientHeight?t:t.parentElement).scrollBy({top:e,behavior:`smooth`}))};return(0,w.useEffect)(()=>{let e=e=>{let t=e.key.toLowerCase();if(e.key===`Escape`||e.key===`Backspace`||t===`a`||t===`q`){e.preventDefault(),u();return}if(e.key===`ArrowUp`||t===`w`||t===`z`){e.preventDefault(),d(-120);return}if(e.key===`ArrowDown`||t===`s`){e.preventDefault(),d(120);return}if(e.key===`Enter`||e.key===` `){e.preventDefault(),c();return}t===`l`&&(e.preventDefault(),l())};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[n,r,s,o,a]),(0,X.jsxs)(`div`,{id:`menu-screen`,className:`about-root`,children:[(0,X.jsx)(Np,{src:pm,muted:e}),(0,X.jsx)(Ip,{onBeforeBack:s,label:`Back`}),(0,X.jsx)(`style`,{children:`
+      `}),(0,X.jsx)(`div`,{className:`sc-root`,role:`navigation`,children:um.map((e,t)=>(0,X.jsxs)(`div`,{className:`sc-bar-outer${n===t?` active`:``}${i?` mounted`:``}`,onClick:()=>{n===t?d():f(),r(t),l(`left`),s(0)},onMouseEnter:()=>{d(),r(t)},children:[(0,X.jsx)(`div`,{className:`sc-bar-red`}),(0,X.jsxs)(`div`,{className:`sc-bar`,children:[(0,X.jsx)(`img`,{className:`sc-char`,src:cm[t],alt:``}),(0,X.jsx)(`div`,{className:`sc-bar-fill`}),(0,X.jsx)(`div`,{className:`sc-bar-shade`}),(0,X.jsxs)(`div`,{className:`sc-bar-content`,children:[(0,X.jsx)(`div`,{className:`sc-role`,children:lm[t].text}),(0,X.jsx)(`div`,{className:`sc-main`,children:(0,X.jsxs)(`div`,{className:`sc-main-top`,children:[(0,X.jsx)(`div`,{className:`sc-icon`,children:e.icon}),(0,X.jsx)(`div`,{className:`sc-label`,children:e.label})]})}),(0,X.jsx)(`div`,{className:`sc-stats`,children:e.stats.map(e=>(0,X.jsxs)(`div`,{className:`sc-stat`,children:[(0,X.jsxs)(`div`,{className:`sc-stat-top`,children:[(0,X.jsx)(`span`,{className:`sc-stat-tag`,style:{color:e.color,borderColor:e.color},children:e.tag}),(0,X.jsx)(`span`,{className:`sc-stat-num`,children:e.value})]}),(0,X.jsxs)(`div`,{className:`sc-stat-bars`,children:[(0,X.jsx)(`div`,{className:`sc-stat-bar-color`,style:{background:e.color}}),(0,X.jsx)(`div`,{className:`sc-stat-bar-black`})]})]},e.tag))})]})]})]},e.id))}),i&&(0,X.jsx)(`div`,{className:`sc-mobile-cats`,"aria-label":`Social categories`,children:um.map((e,t)=>(0,X.jsx)(`button`,{type:`button`,className:`sc-mobile-cat${n===t?` active`:``}`,onClick:()=>{n===t?d():f(),r(t),s(0),l(`right`)},children:e.icon},`mobile-cat-${e.id}`))}),i&&(0,X.jsx)(`div`,{className:`sc-info-panel`,children:Array.from({length:um[n].bars}).map((e,t)=>(0,X.jsx)(`div`,{className:`sc-info-bar-wrap${o===t?` selected`:``}`,ref:e=>{h.current[t]=e},style:{animationDelay:`${t*50}ms`},onClick:()=>{let e=um[n].links[t];if(!e){m();return}f(),s(t),l(`right`);let r=/^(https?:\/\/|mailto:)/.test(e)?e:`https://${e}`;window.open(r,`_blank`)},onMouseEnter:()=>{d(),s(t),l(`right`)},children:(0,X.jsxs)(`div`,{className:`sc-info-bar`,children:[(0,X.jsx)(`img`,{className:`sc-info-bar-icon`,src:um[n].barIcon,alt:``}),(0,X.jsx)(dm,{text:um[n].entries[t].label,selected:o===t}),(0,X.jsx)(`span`,{className:`sc-info-bar-box`,children:`VIEWS`}),(0,X.jsx)(`span`,{className:`sc-info-bar-count`,children:um[n].counts[t]})]})},`bar-${n}-${t}`))})]})}var pm=`/vaishvannn/assets/main1.optimized-C9UXJ_Xu.mp4`,mm=`/vaishvannn/assets/mainm-Dt0EWjBj.jpeg`,hm=Lp.bio,gm=[`Crazily obsessed about product and anything startup`,`LOVES Persona`,`Will happily turn any messy dataset into a story`,`Always building something on the side, usually with way too many tabs open`],_m=Hp.find(e=>e.label===`GitHub`)?.href;function vm({mediaMuted:e=!0,sfxMuted:t=!0}){let{goBack:n}=Pp(`/`),r=pt(),i=(0,w.useRef)(null),{playHover:a,playConfirm:o,playBack:s}=kp({muted:t}),c=()=>{_m&&(o(),window.open(_m,`_blank`,`noopener,noreferrer`))},l=()=>{o(),r(`/socials`)},u=()=>{s(),n()},d=e=>{let t=i.current;t&&(a(),(t.scrollHeight>t.clientHeight?t:t.parentElement).scrollBy({top:e,behavior:`smooth`}))};return(0,w.useEffect)(()=>{let e=e=>{let t=e.key.toLowerCase();if(e.key===`Escape`||e.key===`Backspace`||t===`a`||t===`q`){e.preventDefault(),u();return}if(e.key===`ArrowUp`||t===`w`||t===`z`){e.preventDefault(),d(-120);return}if(e.key===`ArrowDown`||t===`s`){e.preventDefault(),d(120);return}if(e.key===`Enter`||e.key===` `){e.preventDefault(),c();return}t===`l`&&(e.preventDefault(),l())};return window.addEventListener(`keydown`,e),()=>window.removeEventListener(`keydown`,e)},[n,r,s,o,a]),(0,X.jsxs)(`div`,{id:`menu-screen`,className:`about-root`,children:[(0,X.jsx)(Np,{src:pm,muted:e}),(0,X.jsx)(Ip,{onBeforeBack:s,label:`Back`}),(0,X.jsx)(`style`,{children:`
         .about-root {
           position: relative;
           height: 100vh;
